@@ -10,6 +10,7 @@ import PencilKit
 
 class ViewController: UIViewController {
 
+ // (remember)
     let toolPicker = PKToolPicker.init()
     @IBOutlet weak var canvasView: PKCanvasView!
     
@@ -26,13 +27,13 @@ class ViewController: UIViewController {
     }
     
     private func setCanvasView(){
-//        if let window = view.window, let toolPicker = PKToolPicker.shared(for: window) {
-            toolPicker.addObserver(canvasView)
-            toolPicker.setVisible(true, forFirstResponder: canvasView)
-            canvasView.becomeFirstResponder()
-//            toolPicker.setVisible(true, forFirstResponder: canvasView)
+// (deprecated in xcode 12)       if let window = view.window, let toolPicker = PKToolPicker.shared(for: window) {
 //            toolPicker.addObserver(canvasView)
+//            toolPicker.setVisible(true, forFirstResponder: canvasView)
 //            canvasView.becomeFirstResponder()
+            toolPicker.setVisible(true, forFirstResponder: canvasView)
+            toolPicker.addObserver(canvasView)
+            canvasView.becomeFirstResponder()
 //        }
     }
     
