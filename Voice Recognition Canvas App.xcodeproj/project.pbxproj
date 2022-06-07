@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C87F9478284ED9B9005E6118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F9477284ED9B9005E6118 /* AppDelegate.swift */; };
+		C87F947A284ED9B9005E6118 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F9479284ED9B9005E6118 /* SceneDelegate.swift */; };
+		C87F947C284ED9B9005E6118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F947B284ED9B9005E6118 /* ViewController.swift */; };
+		C87F947F284ED9B9005E6118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C87F947D284ED9B9005E6118 /* Main.storyboard */; };
+		C87F9481284ED9BA005E6118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C87F9480284ED9BA005E6118 /* Assets.xcassets */; };
+		C87F9484284ED9BA005E6118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C87F9482284ED9BA005E6118 /* LaunchScreen.storyboard */; };
+		C87F948F284ED9BA005E6118 /* Voice_Recognition_Canvas_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F948E284ED9BA005E6118 /* Voice_Recognition_Canvas_AppTests.swift */; };
+		C87F9499284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F9498284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITests.swift */; };
+		C87F949B284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F949A284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C87F948B284ED9BA005E6118 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C87F946C284ED9B9005E6118 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C87F9473284ED9B9005E6118;
+			remoteInfo = "Voice Recognition Canvas App";
+		};
+		C87F9495284ED9BA005E6118 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C87F946C284ED9B9005E6118 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C87F9473284ED9B9005E6118;
+			remoteInfo = "Voice Recognition Canvas App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C87F9474284ED9B9005E6118 /* Voice Recognition Canvas App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voice Recognition Canvas App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C87F9477284ED9B9005E6118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C87F9479284ED9B9005E6118 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C87F947B284ED9B9005E6118 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C87F947E284ED9B9005E6118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C87F9480284ED9BA005E6118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C87F9483284ED9BA005E6118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C87F9485284ED9BA005E6118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C87F948A284ED9BA005E6118 /* Voice Recognition Canvas AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Voice Recognition Canvas AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C87F948E284ED9BA005E6118 /* Voice_Recognition_Canvas_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice_Recognition_Canvas_AppTests.swift; sourceTree = "<group>"; };
+		C87F9494284ED9BA005E6118 /* Voice Recognition Canvas AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Voice Recognition Canvas AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C87F9498284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice_Recognition_Canvas_AppUITests.swift; sourceTree = "<group>"; };
+		C87F949A284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice_Recognition_Canvas_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C87F9471284ED9B9005E6118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C87F9487284ED9BA005E6118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C87F9491284ED9BA005E6118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C87F946B284ED9B9005E6118 = {
+			isa = PBXGroup;
+			children = (
+				C87F9476284ED9B9005E6118 /* Voice Recognition Canvas App */,
+				C87F948D284ED9BA005E6118 /* Voice Recognition Canvas AppTests */,
+				C87F9497284ED9BA005E6118 /* Voice Recognition Canvas AppUITests */,
+				C87F9475284ED9B9005E6118 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C87F9475284ED9B9005E6118 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C87F9474284ED9B9005E6118 /* Voice Recognition Canvas App.app */,
+				C87F948A284ED9BA005E6118 /* Voice Recognition Canvas AppTests.xctest */,
+				C87F9494284ED9BA005E6118 /* Voice Recognition Canvas AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C87F9476284ED9B9005E6118 /* Voice Recognition Canvas App */ = {
+			isa = PBXGroup;
+			children = (
+				C87F9477284ED9B9005E6118 /* AppDelegate.swift */,
+				C87F9479284ED9B9005E6118 /* SceneDelegate.swift */,
+				C87F947B284ED9B9005E6118 /* ViewController.swift */,
+				C87F947D284ED9B9005E6118 /* Main.storyboard */,
+				C87F9480284ED9BA005E6118 /* Assets.xcassets */,
+				C87F9482284ED9BA005E6118 /* LaunchScreen.storyboard */,
+				C87F9485284ED9BA005E6118 /* Info.plist */,
+			);
+			path = "Voice Recognition Canvas App";
+			sourceTree = "<group>";
+		};
+		C87F948D284ED9BA005E6118 /* Voice Recognition Canvas AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C87F948E284ED9BA005E6118 /* Voice_Recognition_Canvas_AppTests.swift */,
+			);
+			path = "Voice Recognition Canvas AppTests";
+			sourceTree = "<group>";
+		};
+		C87F9497284ED9BA005E6118 /* Voice Recognition Canvas AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C87F9498284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITests.swift */,
+				C87F949A284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITestsLaunchTests.swift */,
+			);
+			path = "Voice Recognition Canvas AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C87F9473284ED9B9005E6118 /* Voice Recognition Canvas App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C87F949E284ED9BA005E6118 /* Build configuration list for PBXNativeTarget "Voice Recognition Canvas App" */;
+			buildPhases = (
+				C87F9470284ED9B9005E6118 /* Sources */,
+				C87F9471284ED9B9005E6118 /* Frameworks */,
+				C87F9472284ED9B9005E6118 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Voice Recognition Canvas App";
+			productName = "Voice Recognition Canvas App";
+			productReference = C87F9474284ED9B9005E6118 /* Voice Recognition Canvas App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C87F9489284ED9BA005E6118 /* Voice Recognition Canvas AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C87F94A1284ED9BA005E6118 /* Build configuration list for PBXNativeTarget "Voice Recognition Canvas AppTests" */;
+			buildPhases = (
+				C87F9486284ED9BA005E6118 /* Sources */,
+				C87F9487284ED9BA005E6118 /* Frameworks */,
+				C87F9488284ED9BA005E6118 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C87F948C284ED9BA005E6118 /* PBXTargetDependency */,
+			);
+			name = "Voice Recognition Canvas AppTests";
+			productName = "Voice Recognition Canvas AppTests";
+			productReference = C87F948A284ED9BA005E6118 /* Voice Recognition Canvas AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C87F9493284ED9BA005E6118 /* Voice Recognition Canvas AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C87F94A4284ED9BA005E6118 /* Build configuration list for PBXNativeTarget "Voice Recognition Canvas AppUITests" */;
+			buildPhases = (
+				C87F9490284ED9BA005E6118 /* Sources */,
+				C87F9491284ED9BA005E6118 /* Frameworks */,
+				C87F9492284ED9BA005E6118 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C87F9496284ED9BA005E6118 /* PBXTargetDependency */,
+			);
+			name = "Voice Recognition Canvas AppUITests";
+			productName = "Voice Recognition Canvas AppUITests";
+			productReference = C87F9494284ED9BA005E6118 /* Voice Recognition Canvas AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C87F946C284ED9B9005E6118 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					C87F9473284ED9B9005E6118 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					C87F9489284ED9BA005E6118 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = C87F9473284ED9B9005E6118;
+					};
+					C87F9493284ED9BA005E6118 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = C87F9473284ED9B9005E6118;
+					};
+				};
+			};
+			buildConfigurationList = C87F946F284ED9B9005E6118 /* Build configuration list for PBXProject "Voice Recognition Canvas App" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C87F946B284ED9B9005E6118;
+			productRefGroup = C87F9475284ED9B9005E6118 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C87F9473284ED9B9005E6118 /* Voice Recognition Canvas App */,
+				C87F9489284ED9BA005E6118 /* Voice Recognition Canvas AppTests */,
+				C87F9493284ED9BA005E6118 /* Voice Recognition Canvas AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C87F9472284ED9B9005E6118 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C87F9484284ED9BA005E6118 /* LaunchScreen.storyboard in Resources */,
+				C87F9481284ED9BA005E6118 /* Assets.xcassets in Resources */,
+				C87F947F284ED9B9005E6118 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C87F9488284ED9BA005E6118 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C87F9492284ED9BA005E6118 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C87F9470284ED9B9005E6118 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C87F947C284ED9B9005E6118 /* ViewController.swift in Sources */,
+				C87F9478284ED9B9005E6118 /* AppDelegate.swift in Sources */,
+				C87F947A284ED9B9005E6118 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C87F9486284ED9BA005E6118 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C87F948F284ED9BA005E6118 /* Voice_Recognition_Canvas_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C87F9490284ED9BA005E6118 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C87F9499284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITests.swift in Sources */,
+				C87F949B284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C87F948C284ED9BA005E6118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C87F9473284ED9B9005E6118 /* Voice Recognition Canvas App */;
+			targetProxy = C87F948B284ED9BA005E6118 /* PBXContainerItemProxy */;
+		};
+		C87F9496284ED9BA005E6118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C87F9473284ED9B9005E6118 /* Voice Recognition Canvas App */;
+			targetProxy = C87F9495284ED9BA005E6118 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C87F947D284ED9B9005E6118 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C87F947E284ED9B9005E6118 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C87F9482284ED9BA005E6118 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C87F9483284ED9BA005E6118 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C87F949C284ED9BA005E6118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C87F949D284ED9BA005E6118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C87F949F284ED9BA005E6118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5C6A66RM65;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Voice Recognition Canvas App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "anupreetttt.Voice-Recognition-Canvas-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C87F94A0284ED9BA005E6118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5C6A66RM65;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Voice Recognition Canvas App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "anupreetttt.Voice-Recognition-Canvas-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C87F94A2284ED9BA005E6118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5C6A66RM65;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "anupreetttt.Voice-Recognition-Canvas-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Voice Recognition Canvas App.app/Voice Recognition Canvas App";
+			};
+			name = Debug;
+		};
+		C87F94A3284ED9BA005E6118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5C6A66RM65;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "anupreetttt.Voice-Recognition-Canvas-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Voice Recognition Canvas App.app/Voice Recognition Canvas App";
+			};
+			name = Release;
+		};
+		C87F94A5284ED9BA005E6118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5C6A66RM65;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "anupreetttt.Voice-Recognition-Canvas-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Voice Recognition Canvas App";
+			};
+			name = Debug;
+		};
+		C87F94A6284ED9BA005E6118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5C6A66RM65;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "anupreetttt.Voice-Recognition-Canvas-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Voice Recognition Canvas App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C87F946F284ED9B9005E6118 /* Build configuration list for PBXProject "Voice Recognition Canvas App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C87F949C284ED9BA005E6118 /* Debug */,
+				C87F949D284ED9BA005E6118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C87F949E284ED9BA005E6118 /* Build configuration list for PBXNativeTarget "Voice Recognition Canvas App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C87F949F284ED9BA005E6118 /* Debug */,
+				C87F94A0284ED9BA005E6118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C87F94A1284ED9BA005E6118 /* Build configuration list for PBXNativeTarget "Voice Recognition Canvas AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C87F94A2284ED9BA005E6118 /* Debug */,
+				C87F94A3284ED9BA005E6118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C87F94A4284ED9BA005E6118 /* Build configuration list for PBXNativeTarget "Voice Recognition Canvas AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C87F94A5284ED9BA005E6118 /* Debug */,
+				C87F94A6284ED9BA005E6118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C87F946C284ED9B9005E6118 /* Project object */;
+}
