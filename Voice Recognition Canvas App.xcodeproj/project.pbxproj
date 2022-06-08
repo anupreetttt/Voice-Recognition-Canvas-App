@@ -16,6 +16,7 @@
 		C87F948F284ED9BA005E6118 /* Voice_Recognition_Canvas_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F948E284ED9BA005E6118 /* Voice_Recognition_Canvas_AppTests.swift */; };
 		C87F9499284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F9498284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITests.swift */; };
 		C87F949B284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F949A284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITestsLaunchTests.swift */; };
+		C8C95CD828503C3800CF4FF8 /* ImgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C95CD728503C3800CF4FF8 /* ImgViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C87F9494284ED9BA005E6118 /* Voice Recognition Canvas AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Voice Recognition Canvas AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87F9498284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice_Recognition_Canvas_AppUITests.swift; sourceTree = "<group>"; };
 		C87F949A284ED9BA005E6118 /* Voice_Recognition_Canvas_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice_Recognition_Canvas_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C8C95CD728503C3800CF4FF8 /* ImgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				C87F9479284ED9B9005E6118 /* SceneDelegate.swift */,
 				C87F947B284ED9B9005E6118 /* ViewController.swift */,
 				C87F947D284ED9B9005E6118 /* Main.storyboard */,
+				C8C95CD728503C3800CF4FF8 /* ImgViewController.swift */,
 				C87F9480284ED9BA005E6118 /* Assets.xcassets */,
 				C87F9482284ED9BA005E6118 /* LaunchScreen.storyboard */,
 				C87F9485284ED9BA005E6118 /* Info.plist */,
@@ -260,6 +263,7 @@
 			files = (
 				C87F947C284ED9B9005E6118 /* ViewController.swift in Sources */,
 				C87F9478284ED9B9005E6118 /* AppDelegate.swift in Sources */,
+				C8C95CD828503C3800CF4FF8 /* ImgViewController.swift in Sources */,
 				C87F947A284ED9B9005E6118 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

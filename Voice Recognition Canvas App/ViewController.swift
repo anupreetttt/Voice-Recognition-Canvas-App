@@ -8,6 +8,7 @@
 import UIKit
 import PencilKit
 
+// A view controller acts as an intermediary between the views it manages and the data of your app.
 class ViewController: UIViewController {
 
  // (remember)
@@ -28,18 +29,22 @@ class ViewController: UIViewController {
     
     private func setCanvasView(){
 // (deprecated in xcode 12)       if let window = view.window, let toolPicker = PKToolPicker.shared(for: window) {
-//            toolPicker.addObserver(canvasView)
-//            toolPicker.setVisible(true, forFirstResponder: canvasView)
-//            canvasView.becomeFirstResponder()
-            toolPicker.setVisible(true, forFirstResponder: canvasView)
             toolPicker.addObserver(canvasView)
+            toolPicker.setVisible(true, forFirstResponder: canvasView)
             canvasView.becomeFirstResponder()
-//        }
+
     }
     
     @IBAction func clearCanvas(_ sender: UIBarButtonItem) {
+        canvasView.drawing = PKDrawing()
     }
     @IBAction func saveToPhotos(_ sender: UIBarButtonItem) {
+        let imgVC = self.storyboard?.instantiateViewController(withIdentifier: "ImgViewController") as? ImgViewController
+        let image = UIGraphicsImageRenderer(bounds: canvasView.bounds).image { _ in
+            view.drawHierarchy(in: canvasView.bounds, afterScreenUpdates: true)
+        }
+        imgVC?.image = image
+        self.navigationController?.pushViewController(imgVC!, animated: true)
     }
 }
 

@@ -27,18 +27,26 @@
                     </view>
                     <navigationItem key="navigationItem" id="dS7-Ly-882">
                         <leftBarButtonItems>
-                            <barButtonItem systemItem="undo" id="mlI-p1-oYR"/>
-                            <barButtonItem systemItem="redo" id="Vat-cN-5Eh"/>
-                        </leftBarButtonItems>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Clear" id="GoS-ph-ptc">
-                                <connections>
-                                    <action selector="clearCanvas:" destination="BYZ-38-t0r" id="GPq-uH-C4b"/>
-                                </connections>
-                            </barButtonItem>
                             <barButtonItem systemItem="camera" id="XxE-d9-Hc8">
                                 <connections>
-                                    <action selector="saveToPhotos:" destination="BYZ-38-t0r" id="t6n-0t-7hc"/>
+                                    <action selector="saveToPhotos:" destination="dkx-z0-nzr" id="j5T-7A-XaS"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Clear" id="GoS-ph-ptc">
+                                <connections>
+                                    <action selector="clearCanvas:" destination="dkx-z0-nzr" id="lfv-8R-AEM"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="redo" id="Vat-cN-5Eh">
+                                <connections>
+                                    <action selector="redo:" destination="dkx-z0-nzr" id="B4i-lt-FZQ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="undo" id="mlI-p1-oYR">
+                                <connections>
+                                    <action selector="undo:" destination="dkx-z0-nzr" id="8PQ-u3-9TL"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -50,6 +58,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-420" y="-410"/>
+        </scene>
+        <!--Img View Controller-->
+        <scene sceneID="fgV-7R-95f">
+            <objects>
+                <viewController storyboardIdentifier="ImgViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wvp-lI-4Su" customClass="ImgViewController" customModule="Voice_Recognition_Canvas_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NPn-7a-VsW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zqD-FF-gkY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GM5-dF-Wu8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="zqD-FF-gkY" secondAttribute="bottom" id="5xy-db-h4x"/>
+                            <constraint firstItem="zqD-FF-gkY" firstAttribute="leading" secondItem="GM5-dF-Wu8" secondAttribute="leading" id="GWB-0g-dPq"/>
+                            <constraint firstItem="zqD-FF-gkY" firstAttribute="top" secondItem="NPn-7a-VsW" secondAttribute="top" id="Xu1-56-wXE"/>
+                            <constraint firstItem="GM5-dF-Wu8" firstAttribute="trailing" secondItem="zqD-FF-gkY" secondAttribute="trailing" id="bss-0S-YF3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="savePhoto" destination="zqD-FF-gkY" id="edH-rB-xLX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQL-a1-vBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331" y="-400"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XO0-as-WhP">
