@@ -7,6 +7,7 @@
 
 import UIKit
 import PencilKit
+import PhotosUI
 
 // A view controller acts as an intermediary between the views it manages and the data of your app.
 class ViewController: UIViewController {
@@ -39,12 +40,28 @@ class ViewController: UIViewController {
         canvasView.drawing = PKDrawing()
     }
     @IBAction func saveToPhotos(_ sender: UIBarButtonItem) {
+        
         let imgVC = self.storyboard?.instantiateViewController(withIdentifier: "ImgViewController") as? ImgViewController
         let image = UIGraphicsImageRenderer(bounds: canvasView.bounds).image { _ in
             view.drawHierarchy(in: canvasView.bounds, afterScreenUpdates: true)
         }
         imgVC?.image = image
         self.navigationController?.pushViewController(imgVC!, animated: true)
+        
+        UIGraphicsBeginImageContextWithOptions(canvasView.bounds.size, false, UIScreen.main.scale)
+        
+        canvasView.drawHierarchy(in: canvasView.bounds, afterScreenUpdates: true)
+        
+        let imageSave = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        if imageSave != nil{
+            PHPhotoLibrary.shared().performChanges({
+                PHAssetChangeRequest.creationRequestForAsset(from: imageSave!)
+            }, completionHandler: {success, error in
+                
+            })
+        }
     }
 }
 
