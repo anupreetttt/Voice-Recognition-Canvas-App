@@ -28,13 +28,16 @@ class ViewController: UIViewController, VoiceOverlayDelegate {
     
     @IBAction func didTapButton() {
         voiceOverlay.delegate = self
-        voiceOverlay.settings.autoStop = false
+        voiceOverlay.settings.autoStart = false
+        voiceOverlay.settings.autoStop = true
+        voiceOverlay.settings.autoStopTimeout = 3
+
         voiceOverlay.start(on: self, textHandler: {
             text, final, _ in
             if final  {
                 print("Final text: \(text)")
             } else {
-                print("In progress: \(text)")
+               // print("In progress: \(text)")
             }
         }, errorHandler: {
             error in
@@ -42,7 +45,7 @@ class ViewController: UIViewController, VoiceOverlayDelegate {
     }
     
     func recording(text: String?, final: Bool?, error: Error?) {
-        <#code#>
+        
     }
     // Notifies the view controller that its view is about to be added to a view hierarchy.
 
