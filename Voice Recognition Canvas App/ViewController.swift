@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Voice Recognition Canvas App
 //
-//  Created by Anupreet Paulkar on 6/6/22.
-//
+//  Created by Anupreet Paulkar
+
 
 import UIKit
 import PencilKit
