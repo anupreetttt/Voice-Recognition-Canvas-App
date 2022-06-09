@@ -8,10 +8,13 @@
 import UIKit
 import PencilKit
 import PhotosUI
+import InstantSearchVoiceOverlay
 
 // A view controller acts as an intermediary between the views it manages and the data of your app.
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, VoiceOverlayDelegate {
+    
+    let voiceOverlay = VoiceOverlayController()
+    @IBOutlet var voiceButton: UIButton!
  // (remember)
     let toolPicker = PKToolPicker.init()
     @IBOutlet weak var canvasView: PKCanvasView!
@@ -19,8 +22,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+//        voiceButton.backgroundColor = .systemCyan
+//        voiceButton.setTitleColor(.white, for: .normal)
     }
     
+    @IBAction func didTapButton() {
+        voiceOverlay.delegate = self
+        voiceOverlay.settings.autoStop = false
+        voiceOverlay.start(on: self, textHandler: {
+            text, final, _ in
+            if final  {
+                print("Final text: \(text)")
+            } else {
+                print("In progress: \(text)")
+            }
+        }, errorHandler: {
+            error in
+        })
+    }
+    
+    func recording(text: String?, final: Bool?, error: Error?) {
+        <#code#>
+    }
     // Notifies the view controller that its view is about to be added to a view hierarchy.
 
     override func viewDidAppear(_ animated: Bool) {
@@ -63,5 +86,6 @@ class ViewController: UIViewController {
             })
         }
     }
+ 
 }
 

@@ -25,6 +25,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="dS7-Ly-882">
                         <leftBarButtonItems>
                             <barButtonItem systemItem="camera" id="XxE-d9-Hc8">
@@ -32,9 +33,9 @@
                                     <action selector="saveToPhotos:" destination="dkx-z0-nzr" id="j5T-7A-XaS"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Clear" id="GoS-ph-ptc">
+                            <barButtonItem title="Mic" style="plain" id="8qn-fR-E5C">
                                 <connections>
-                                    <action selector="clearCanvas:" destination="dkx-z0-nzr" id="lfv-8R-AEM"/>
+                                    <action selector="didTapButton" destination="BYZ-38-t0r" id="12U-g1-pwi"/>
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
@@ -51,6 +52,7 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="canvasView" destination="5U6-Xf-GJW" id="9vL-Qw-Dlh"/>
                     </connections>

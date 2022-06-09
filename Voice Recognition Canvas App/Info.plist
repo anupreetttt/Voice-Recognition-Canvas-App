@@ -4,6 +4,10 @@
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>To store the canvas in the gallery</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>To grant permission for using microphone</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>To allow speech recognition</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
