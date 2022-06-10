@@ -16,19 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5U6-Xf-GJW" customClass="PKCanvasView">
-                                <rect key="frame" x="0.0" y="250" width="414" height="646"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vhd-Ny-vlB">
-                                <rect key="frame" x="18" y="99" width="374" height="143"/>
+                                <rect key="frame" x="18" y="99" width="374" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5U6-Xf-GJW" customClass="PKCanvasView">
+                                <rect key="frame" x="0.0" y="250" width="414" height="646"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -41,11 +41,7 @@
                                     <action selector="saveToPhotos:" destination="dkx-z0-nzr" id="j5T-7A-XaS"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Mic" id="8qn-fR-E5C">
-                                <connections>
-                                    <action selector="didTapButton" destination="BYZ-38-t0r" id="12U-g1-pwi"/>
-                                </connections>
-                            </barButtonItem>
+                            <barButtonItem title="Mic" id="lDI-oG-Mdq"/>
                         </leftBarButtonItems>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="redo" id="Vat-cN-5Eh">
@@ -64,6 +60,7 @@
                     <connections>
                         <outlet property="canvasView" destination="5U6-Xf-GJW" id="9vL-Qw-Dlh"/>
                         <outlet property="textView" destination="Vhd-Ny-vlB" id="zGX-wC-ZwO"/>
+                        <outlet property="voiceButton" destination="lDI-oG-Mdq" id="Tdg-Wb-BU6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

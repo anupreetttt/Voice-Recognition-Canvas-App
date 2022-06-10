@@ -7,16 +7,25 @@ import UIKit
 import PencilKit
 import PhotosUI
 import InstantSearchVoiceOverlay
+import Speech
 
 // A view controller acts as an intermediary between the views it manages and the data of your app.
-class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate {
+class ViewController: UIViewController, UITextViewDelegate, SFSpeechRecognizerDelegate {
     
     let placeHolder = "Text here"
     
     @IBOutlet var textView: UITextView!
     
-    let voiceOverlay = VoiceOverlayController()
-    @IBOutlet var voiceButton: UIButton!
+    @IBOutlet weak var voiceButton: UIBarButtonItem!
+    
+    // local properties
+    
+       let audioEngine = AVAudioEngine()
+       let speechReconizer : SFSpeechRecognizer? = SFSpeechRecognizer()
+       let request = SFSpeechAudioBufferRecognitionRequest()
+       var task : SFSpeechRecognitionTask!
+       var isStart : Bool = false
+    
  // (remember)
     let toolPicker = PKToolPicker.init()
     @IBOutlet weak var canvasView: PKCanvasView!
@@ -29,7 +38,117 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         textView.delegate = self
         textView.text = placeHolder
         textView.textColor = .lightGray
+        
+        requestPersmission()
     }
+    
+    @IBAction func btn_startStop(_ sender: Any) {
+        
+        isStart = !isStart
+        
+        if isStart {
+            startSpeechRecognization()
+        } else {
+            cancelSpeechRecognization()
+        }
+    }
+    
+    func requestPersmission() {
+        self.voiceButton.isEnabled = false
+        SFSpeechRecognizer.requestAuthorization {(authState) in
+            OperationQueue.main.addOperation {
+                if authState == .authorized {
+                    print("Authorized")
+                    self.voiceButton.isEnabled = true
+                } else if authState == .denied {
+                    self.alertView(message: "User access denied")
+                } else if authState == .notDetermined {
+                    self.alertView(message: "No svoice recognition available")
+                } else if authState == .restricted {
+                    self.alertView(message: "Access restricted")
+                }
+            }
+        }
+    }
+    
+    func startSpeechRecognization(){
+        let node = audioEngine.inputNode
+        let recordingFormat = node.outputFormat(forBus: 0)
+        
+        node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, _) in
+            self.request.append(buffer)
+        }
+        
+        audioEngine.prepare()
+        do {
+            try audioEngine.start()
+        } catch let error {
+            alertView(message: "Error comes here for starting the audio listner =\(error.localizedDescription)")
+        }
+        
+        guard let myRecognization = SFSpeechRecognizer() else {
+            self.alertView(message: "Recognization is not allow on your local")
+            return
+        }
+        
+        if !myRecognization.isAvailable {
+            self.alertView(message: "Recognization is free right now, Please try again after some time.")
+        }
+        
+        task = speechReconizer?.recognitionTask(with: request, resultHandler: { (response, error) in
+            guard let response = response else {
+                if error != nil {
+                    self.alertView(message: error.debugDescription)
+                }else {
+                    self.alertView(message: "Problem in giving the response")
+                }
+                return
+            }
+            
+            let message = response.bestTranscription.formattedString
+            print("Message : \(message)")
+            self.textView.text = message
+            
+            
+//            var lastString: String = ""
+//            for segment in response.bestTranscription.segments {
+//                let indexTo = message.index(message.startIndex, offsetBy: segment.substringRange.location)
+//                lastString = String(message[indexTo...])
+//            }
+                        
+        })
+    }
+    
+    
+    func cancelSpeechRecognization() {
+        task.finish()
+        task.cancel()
+        task = nil
+        
+        request.endAudio()
+        audioEngine.stop()
+        //audioEngine.inputNode.removeTap(onBus: 0)
+        
+        //MARK: UPDATED
+        if audioEngine.inputNode.numberOfInputs > 0 {
+            audioEngine.inputNode.removeTap(onBus: 0)
+        }
+    }
+    
+    
+    
+    func alertView(message:String){
+        let controller = UIAlertController.init(title:"Error ocured ...!", message: message,
+            preferredStyle:.alert)
+        controller.addAction(UIAlertAction(title: "OK",style: .default, handler:{ (_)in
+            controller.dismiss(animated:true,completion:nil)
+        }))
+        self.present(controller,animated:true,completion:nil)
+    }
+    
+    
+    
+    // ---------->>>>
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == .lightGray
@@ -47,27 +166,7 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         }
     }
     
-    @IBAction func didTapButton() {
-        voiceOverlay.delegate = self
-        voiceOverlay.settings.autoStart = false
-        voiceOverlay.settings.autoStop = true
-        voiceOverlay.settings.autoStopTimeout = 3
 
-        voiceOverlay.start(on: self, textHandler: {
-            text, final, _ in
-            if final  {
-                print("Final text: \(text)")
-            } else {
-               // print("In progress: \(text)")
-            }
-        }, errorHandler: {
-            error in
-        })
-    }
-    
-    func recording(text: String?, final: Bool?, error: Error?) {
-        
-    }
     // Notifies the view controller that its view is about to be added to a view hierarchy.
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
