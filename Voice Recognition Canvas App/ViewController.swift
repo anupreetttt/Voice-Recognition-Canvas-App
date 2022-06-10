@@ -3,14 +3,17 @@
 //  Voice Recognition Canvas App
 //
 //  Created by Anupreet Paulkar
-
 import UIKit
 import PencilKit
 import PhotosUI
 import InstantSearchVoiceOverlay
 
 // A view controller acts as an intermediary between the views it manages and the data of your app.
-class ViewController: UIViewController, VoiceOverlayDelegate {
+class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate {
+    
+    let placeHolder = "Text here"
+    
+    @IBOutlet var textView: UITextView!
     
     let voiceOverlay = VoiceOverlayController()
     @IBOutlet var voiceButton: UIButton!
@@ -23,6 +26,25 @@ class ViewController: UIViewController, VoiceOverlayDelegate {
         // Do any additional setup after loading the view.
 //        voiceButton.backgroundColor = .systemCyan
 //        voiceButton.setTitleColor(.white, for: .normal)
+        textView.delegate = self
+        textView.text = placeHolder
+        textView.textColor = .lightGray
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == .lightGray
+        {
+            textView.text = ""
+            textView.textColor = .black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == ""
+        {
+            textView.text = placeHolder
+            textView.textColor = .lightGray
+        }
     }
     
     @IBAction func didTapButton() {
@@ -47,7 +69,6 @@ class ViewController: UIViewController, VoiceOverlayDelegate {
         
     }
     // Notifies the view controller that its view is about to be added to a view hierarchy.
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setCanvasView()
@@ -90,4 +111,3 @@ class ViewController: UIViewController, VoiceOverlayDelegate {
     }
  
 }
-
