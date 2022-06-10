@@ -115,6 +115,7 @@ public typealias RecordableHandler = () -> Recordable
   }
 }
 
-public protocol VoiceOverlayDelegate: class {
+public protocol VoiceOverlayDelegate: AnyObject {
   func recording(text: String?, final: Bool?, error: Error?)
 }
+ 
