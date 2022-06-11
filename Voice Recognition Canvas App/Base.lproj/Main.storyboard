@@ -25,10 +25,17 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5U6-Xf-GJW" customClass="PKCanvasView">
-                                <rect key="frame" x="0.0" y="250" width="414" height="646"/>
+                                <rect key="frame" x="0.0" y="430" width="414" height="466"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olQ-jZ-koP">
+                                <rect key="frame" x="20" y="227" width="372" height="163"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -59,7 +66,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="canvasView" destination="5U6-Xf-GJW" id="9vL-Qw-Dlh"/>
-                        <outlet property="textView" destination="Vhd-Ny-vlB" id="zGX-wC-ZwO"/>
+                        <outlet property="textView" destination="Vhd-Ny-vlB" id="9Xm-Rf-5OR"/>
                         <outlet property="voiceButton" destination="lDI-oG-Mdq" id="Tdg-Wb-BU6"/>
                     </connections>
                 </viewController>

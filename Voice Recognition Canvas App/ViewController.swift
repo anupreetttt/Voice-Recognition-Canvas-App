@@ -14,10 +14,11 @@ class ViewController: UIViewController, UITextViewDelegate, SFSpeechRecognizerDe
     
     let placeHolder = "Text here"
     
-    @IBOutlet var textView: UITextView!
     
+    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var voiceButton: UIBarButtonItem!
     
+    @IBOutlet weak var label_view: UILabel!
     // local properties
     
        let audioEngine = AVAudioEngine()
@@ -107,7 +108,7 @@ class ViewController: UIViewController, UITextViewDelegate, SFSpeechRecognizerDe
             
             let message = response.bestTranscription.formattedString
             print("Message : \(message)")
-            self.textView.text = message
+            self.label_view.text = message
             
             
 //            var lastString: String = ""
