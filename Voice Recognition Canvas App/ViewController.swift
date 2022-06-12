@@ -26,7 +26,8 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         // Do any additional setup after loading the view.
 //        voiceButton.backgroundColor = .systemCyan
 //        voiceButton.setTitleColor(.white, for: .normal)
-        self.textView.delegate = self
+        
+    // self.textView.delegate = self
         
         textView.delegate = self
         textView.text = placeHolder
@@ -34,15 +35,15 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         
     }
 
-    // Hide keyboard when user touches outside keyboar
-    override func touchesBegan(_ touches: Set<UITouch>, with event : UIEvent?) {
-    self.view.endEditing(true)
-    }
-    // Presses return key
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    textField.resignFirstResponder()
-    return (true)
-    }
+//    // Hide keyboard when user touches outside keyboar
+//    override func touchesBegan(_ touches: Set<UITouch>, with event : UIEvent?) {
+//    self.view.endEditing(true)
+//    }
+//    // Presses return key
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//    textField.resignFirstResponder()
+//    return (true)
+//    }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == .lightGray
