@@ -30,6 +30,7 @@
 		C8352EA1285563C700644C92 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8352E8A285563C700644C92 /* IQUIView+Hierarchy.swift */; };
 		C8352EA2285563C700644C92 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8352E8B285563C700644C92 /* IQNSArray+Sort.swift */; };
 		C8352EA3285563C700644C92 /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8352E8C285563C700644C92 /* IQKeyboardManager+UITextFieldViewNotification.swift */; };
+		C8352EA52855C2C600644C92 /* base65.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8352EA42855C2C600644C92 /* base65.swift */; };
 		C87F9478284ED9B9005E6118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F9477284ED9B9005E6118 /* AppDelegate.swift */; };
 		C87F947A284ED9B9005E6118 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F9479284ED9B9005E6118 /* SceneDelegate.swift */; };
 		C87F947C284ED9B9005E6118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F947B284ED9B9005E6118 /* ViewController.swift */; };
@@ -87,6 +88,7 @@
 		C8352E8A285563C700644C92 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		C8352E8B285563C700644C92 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		C8352E8C285563C700644C92 /* IQKeyboardManager+UITextFieldViewNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQKeyboardManager+UITextFieldViewNotification.swift"; sourceTree = "<group>"; };
+		C8352EA42855C2C600644C92 /* base65.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = base65.swift; sourceTree = "<group>"; };
 		C87F9474284ED9B9005E6118 /* Voice Recognition Canvas App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voice Recognition Canvas App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87F9477284ED9B9005E6118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C87F9479284ED9B9005E6118 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				C87F9480284ED9BA005E6118 /* Assets.xcassets */,
 				C87F9482284ED9BA005E6118 /* LaunchScreen.storyboard */,
 				C87F9485284ED9BA005E6118 /* Info.plist */,
+				C8352EA42855C2C600644C92 /* base65.swift */,
 			);
 			path = "Voice Recognition Canvas App";
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				C8352E9B285563C700644C92 /* IQKeyboardManager+Debug.swift in Sources */,
 				C8352E9A285563C700644C92 /* IQKeyboardManager.swift in Sources */,
 				C8352E99285563C700644C92 /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				C8352EA52855C2C600644C92 /* base65.swift in Sources */,
 				C8352E95285563C700644C92 /* IQKeyboardManager+UIKeyboardNotification.swift in Sources */,
 				C8352E9E285563C700644C92 /* IQUIScrollView+Additions.swift in Sources */,
 				C8352E9C285563C700644C92 /* IQKeyboardManager+OrientationNotification.swift in Sources */,

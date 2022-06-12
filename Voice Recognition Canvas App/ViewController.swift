@@ -10,6 +10,9 @@ import PencilKit
 import PhotosUI
 import InstantSearchVoiceOverlay
 
+
+
+
 // A view controller acts as an intermediary between the views it manages and the data of your app.
 class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate {
     
@@ -29,6 +32,10 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         // Do any additional setup after loading the view.
 //        voiceButton.backgroundColor = .systemCyan
 //        voiceButton.setTitleColor(.white, for: .normal)
+        
+        let time = UInt64(Date().timeIntervalSince1970 * 1000)
+
+        print("Timestamp in milisecond \(time)")
         
     // self.textView.delegate = self
         
