@@ -34,14 +34,7 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
 //        voiceButton.backgroundColor = .systemCyan
 //        voiceButton.setTitleColor(.white, for: .normal)
         
-        let tap = UITapGestureRecognizer(target: self, action: Selector(("showMoreActions:")))
-            tap.numberOfTapsRequired = 1
-            view.addGestureRecognizer(tap)
-        
-    // ------>>>> Timestamp in miliseconds
-        let time = UInt64(Date().timeIntervalSince1970 * 1000)
 
-        print("Timestamp in milisecond \(time)")
         
     // self.textView.delegate = self
         
@@ -225,7 +218,14 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         // Displays it on the label :
         print(dateTimeString)
         
+        let tap = UITapGestureRecognizer(target: self, action: Selector(("showMoreActions:")))
+            tap.numberOfTapsRequired = 1
+            view.addGestureRecognizer(tap)
         
+    // ------>>>> Timestamp in miliseconds
+        let time = UInt64(Date().timeIntervalSince1970 * 1000)
+
+        print("Timestamp in milisecond \(time)")
         // ------------>>>> For creating CSV file
         let fileName = "testing.csv" // CSV filename
         
@@ -238,12 +238,19 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
                                     encoding: String.Encoding.utf8.rawValue, delimiter: unichar(",".utf8.first!))
         
         csvWriter?.writeField("Timestamp")
-        csvWriter?.writeField("Date")
+        csvWriter?.writeField("MM-dd-yyy")
+
         csvWriter?.finishLine()
         
         var arrOfTimestamp = [[String]]()
+      //  var arrOfTimeInMiliSec = [[Int]]()
         
         arrOfTimestamp.append([dateTimeString])
+        arrOfTimestamp.append([dateString])
+
+
+       // arrOfTimeInMiliSec.append([time])
+
         
         for(elements) in arrOfTimestamp.enumerated() {
             csvWriter?.writeField(elements.element[0])
