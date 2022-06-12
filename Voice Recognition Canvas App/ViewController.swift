@@ -36,8 +36,29 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         textView.text = placeHolder
         textView.textColor = .lightGray
         
+//        let date = NSDate()
+//        let formatDate = DateFormatter()
+//        formatDate.dateFormat = "MM-dd-yyyy"
+//        let dateString = formatDate.string(from: date as Date)
+//        print(dateString)
+//
+//        let stringDate = "06/12/2022"
+//        formatDate.dateFormat = "MM/dd/yyyy"
+//        formatDate.timeZone = NSTimeZone(abbreviation: "GMT +0:00") as TimeZone?
+//        let dateFromString = formatDate.date(from: stringDate)
+//        print (dateFromString!)
+//
+//        // Gets the current date and time :
+//        let currentDateTime = Date ()
+//        // Initializes the date formatter and set the style :
+//        let formatter = DateFormatter ()
+//        formatter.timeStyle = .medium
+//        formatter.dateStyle = .long
+//        // Gets the date and time String from the date object :
+//        let dateTimeString = formatter.string ( from : currentDateTime )
+//        // Displays it on the label :
+//        print(dateTimeString)
     }
-
 //    // Hide keyboard when user touches outside keyboar
 //    override func touchesBegan(_ touches: Set<UITouch>, with event : UIEvent?) {
 //    self.view.endEditing(true)
@@ -151,6 +172,29 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
                 
             })
         }
+        let date = NSDate()
+        let formatDate = DateFormatter()
+        formatDate.dateFormat = "MM-dd-yyyy"
+        let dateString = formatDate.string(from: date as Date)
+        print(dateString)
+        
+        let stringDate = "06/12/2022"
+        formatDate.dateFormat = "MM/dd/yyyy"
+        formatDate.timeZone = NSTimeZone(abbreviation: "GMT +0:00") as TimeZone?
+        let dateFromString = formatDate.date(from: stringDate)
+        print (dateFromString!)
+        
+        // Gets the current date and time :
+        let currentDateTime = Date ()
+        // Initializes the date formatter and set the style :
+        let formatter = DateFormatter ()
+        formatter.timeStyle = .medium
+        formatter.dateStyle = .long
+        // Gets the date and time String from the date object :
+        let dateTimeString = formatter.string ( from : currentDateTime )
+        // Displays it on the label :
+        print(dateTimeString)
+        
     }
 
 
