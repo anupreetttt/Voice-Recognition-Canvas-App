@@ -647,6 +647,7 @@
 				DEVELOPMENT_TEAM = 5C6A66RM65;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Voice Recognition Canvas App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ArtisticVR;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To grant permission for using microphone";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To store the canvas in the gallery";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "To allow speech recognition";
@@ -679,6 +680,7 @@
 				DEVELOPMENT_TEAM = 5C6A66RM65;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Voice Recognition Canvas App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ArtisticVR;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To grant permission for using microphone";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To store the canvas in the gallery";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "To allow speech recognition";

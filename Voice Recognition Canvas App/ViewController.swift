@@ -13,6 +13,7 @@ import InstantSearchVoiceOverlay
 // A view controller acts as an intermediary between the views it manages and the data of your app.
 class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate {
     
+    
     let placeHolder = "Text here"
     
     @IBOutlet var textView: UITextView!
@@ -151,5 +152,8 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
             })
         }
     }
-     
+
+
 }
+
+
