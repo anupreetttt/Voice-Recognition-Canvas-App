@@ -3,6 +3,8 @@
 //  Voice Recognition Canvas App
 //
 //  Created by Anupreet Paulkar
+
+
 import UIKit
 import PencilKit
 import PhotosUI
@@ -44,6 +46,32 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
 //    textField.resignFirstResponder()
 //    return (true)
 //    }
+    
+    // ----------------->>>>>>>> FOR UI TOUCH STATUS
+    
+    override func touchesBegan(_ touches : Set<UITouch> , with event : UIEvent?) {
+    super.touchesBegan(touches , with: event)
+        let touch = touches.first!
+        let location = touch.location(in: view)
+    print("touches began \(location)" )
+    }
+    
+    override func touchesMoved(_ touches : Set<UITouch> , with event: UIEvent?) {
+    super.touchesMoved (touches , with: event )
+    print ( "touches moved" )
+    }
+    
+    override func touchesEnded(_ touches : Set<UITouch> , with event : UIEvent?) {
+    super.touchesEnded(touches , with: event)
+    print ( "touches ended" )
+    }
+    
+    override func touchesCancelled(_ touches : Set<UITouch> , with event: UIEvent?) {
+    super.touchesCancelled (touches , with: event )
+    print ("touches cancelled")
+    }
+    
+    
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == .lightGray
