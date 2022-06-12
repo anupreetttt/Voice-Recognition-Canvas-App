@@ -31,6 +31,7 @@
 		C8352EA2285563C700644C92 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8352E8B285563C700644C92 /* IQNSArray+Sort.swift */; };
 		C8352EA3285563C700644C92 /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8352E8C285563C700644C92 /* IQKeyboardManager+UITextFieldViewNotification.swift */; };
 		C8352EA52855C2C600644C92 /* base65.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8352EA42855C2C600644C92 /* base65.swift */; };
+		C8352EA92855D1B000644C92 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C8352EA82855D1B000644C92 /* CHCSVParser.m */; };
 		C87F9478284ED9B9005E6118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F9477284ED9B9005E6118 /* AppDelegate.swift */; };
 		C87F947A284ED9B9005E6118 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F9479284ED9B9005E6118 /* SceneDelegate.swift */; };
 		C87F947C284ED9B9005E6118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F947B284ED9B9005E6118 /* ViewController.swift */; };
@@ -89,6 +90,9 @@
 		C8352E8B285563C700644C92 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		C8352E8C285563C700644C92 /* IQKeyboardManager+UITextFieldViewNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQKeyboardManager+UITextFieldViewNotification.swift"; sourceTree = "<group>"; };
 		C8352EA42855C2C600644C92 /* base65.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = base65.swift; sourceTree = "<group>"; };
+		C8352EA62855D1AF00644C92 /* Voice Recognition Canvas App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Voice Recognition Canvas App-Bridging-Header.h"; sourceTree = "<group>"; };
+		C8352EA72855D1B000644C92 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		C8352EA82855D1B000644C92 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		C87F9474284ED9B9005E6118 /* Voice Recognition Canvas App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voice Recognition Canvas App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87F9477284ED9B9005E6118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C87F9479284ED9B9005E6118 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -215,12 +219,15 @@
 		C87F946B284ED9B9005E6118 = {
 			isa = PBXGroup;
 			children = (
+				C8352EA82855D1B000644C92 /* CHCSVParser.m */,
+				C8352EA72855D1B000644C92 /* CHCSVParser.h */,
 				C87F9476284ED9B9005E6118 /* Voice Recognition Canvas App */,
 				C87F948D284ED9BA005E6118 /* Voice Recognition Canvas AppTests */,
 				C87F9497284ED9BA005E6118 /* Voice Recognition Canvas AppUITests */,
 				C87F9475284ED9B9005E6118 /* Products */,
 				6F2312BE6B17DF52F664726A /* Pods */,
 				632BF6EC7189A410F2858B1A /* Frameworks */,
+				C8352EA62855D1AF00644C92 /* Voice Recognition Canvas App-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -338,6 +345,7 @@
 				TargetAttributes = {
 					C87F9473284ED9B9005E6118 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					C87F9489284ED9BA005E6118 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -467,6 +475,7 @@
 				C8C95CD828503C3800CF4FF8 /* ImgViewController.swift in Sources */,
 				C8352E9F285563C700644C92 /* IQUIViewController+Additions.swift in Sources */,
 				C8352E93285563C700644C92 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
+				C8352EA92855D1B000644C92 /* CHCSVParser.m in Sources */,
 				C8352E94285563C700644C92 /* IQInvocation.swift in Sources */,
 				C8352E8E285563C700644C92 /* IQKeyboardManager+Internal.swift in Sources */,
 				C8352E97285563C700644C92 /* IQKeyboardManagerConstants.swift in Sources */,
@@ -646,12 +655,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5C6A66RM65;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Voice Recognition Canvas App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = ArtisticVR;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To grant permission for using microphone";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To store the canvas in the gallery";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "To allow speech recognition";
@@ -668,6 +679,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = anupreetttt.VoiceRecognitionCanvasApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Voice Recognition Canvas App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -679,12 +692,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5C6A66RM65;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Voice Recognition Canvas App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = ArtisticVR;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To grant permission for using microphone";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To store the canvas in the gallery";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "To allow speech recognition";
@@ -701,6 +716,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = anupreetttt.VoiceRecognitionCanvasApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Voice Recognition Canvas App-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

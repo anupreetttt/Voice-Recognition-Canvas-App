@@ -13,8 +13,9 @@ import InstantSearchVoiceOverlay
 
 
 
+
 // A view controller acts as an intermediary between the views it manages and the data of your app.
-class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate {
+class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate, UIGestureRecognizerDelegate {
     
     
     let placeHolder = "Text here"
@@ -33,6 +34,11 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
 //        voiceButton.backgroundColor = .systemCyan
 //        voiceButton.setTitleColor(.white, for: .normal)
         
+        let tap = UITapGestureRecognizer(target: self, action: Selector(("showMoreActions:")))
+            tap.numberOfTapsRequired = 1
+            view.addGestureRecognizer(tap)
+        
+    // ------>>>> Timestamp in miliseconds
         let time = UInt64(Date().timeIntervalSince1970 * 1000)
 
         print("Timestamp in milisecond \(time)")
@@ -75,6 +81,23 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
 //    textField.resignFirstResponder()
 //    return (true)
 //    }
+    
+    //-------->>> For touch input
+//    @objc func touchedScreen(touch: UITapGestureRecognizer) {
+//        let touchPoint = touch.location(in: self.view)
+//        print(touchPoint)
+//    }
+
+    func showMoreActions(touch: UITapGestureRecognizer) {
+
+        let touchPoint = touch.location(in: self.view)
+        let DynamicView = UIView(frame: CGRect(x: touchPoint.x, y: touchPoint.y, width: 100, height: 100))
+        DynamicView.backgroundColor=UIColor.green
+          DynamicView.layer.cornerRadius = 25
+          DynamicView.layer.borderWidth = 2
+          self.view.addSubview(DynamicView)
+        print(touchPoint)
+  }
     
     // ----------------->>>>>>>> FOR UI TOUCH STATUS
     
@@ -202,7 +225,43 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         // Displays it on the label :
         print(dateTimeString)
         
+        
+        // ------------>>>> For creating CSV file
+        let fileName = "testing.csv" // CSV filename
+        
+        let documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+        
+        let documentURL = URL(fileURLWithPath: documentDirectoryPath).appendingPathComponent(fileName)
+        
+        let output = OutputStream.toMemory()
+        let csvWriter = CHCSVWriter(outputStream: output,
+                                    encoding: String.Encoding.utf8.rawValue, delimiter: unichar(",".utf8.first!))
+        
+        csvWriter?.writeField("Timestamp")
+        csvWriter?.writeField("Date")
+        csvWriter?.finishLine()
+        
+        var arrOfTimestamp = [[String]]()
+        
+        arrOfTimestamp.append([dateTimeString])
+        
+        for(elements) in arrOfTimestamp.enumerated() {
+            csvWriter?.writeField(elements.element[0])
+        }
+        
+        csvWriter?.closeStream()
+        
+        let buffer = (output.property(forKey: .dataWrittenToMemoryStreamKey) as? Data)!
+        
+        do{
+            try buffer.write(to: documentURL)
+        }
+        catch {
+            
+        }
+
     }
+    
 
 
 }
