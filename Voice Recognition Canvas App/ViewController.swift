@@ -98,17 +98,21 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
     super.touchesBegan(touches , with: event)
         let touch = touches.first!
         let location = touch.location(in: view)
-    print("touches began \(location)" )
+    print("touches began \(location)")
     }
     
     override func touchesMoved(_ touches : Set<UITouch> , with event: UIEvent?) {
     super.touchesMoved (touches , with: event )
-    print ( "touches moved" )
+        let touch = touches.first!
+        let location = touch.location(in: view)
+    print ("touches moved \(location)")
     }
     
     override func touchesEnded(_ touches : Set<UITouch> , with event : UIEvent?) {
     super.touchesEnded(touches , with: event)
-    print ( "touches ended" )
+        let touch = touches.first!
+        let location = touch.location(in: view)
+    print ("touches ended \(location)")
     }
     
     override func touchesCancelled(_ touches : Set<UITouch> , with event: UIEvent?) {
@@ -249,6 +253,7 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         arrOfTimestamp.append([dateString])
 
 
+
        // arrOfTimeInMiliSec.append([time])
 
         
@@ -266,11 +271,7 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         catch {
             
         }
-
     }
-    
-
-
 }
 
 
