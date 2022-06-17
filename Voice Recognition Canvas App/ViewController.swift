@@ -25,7 +25,7 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
     let voiceOverlay = VoiceOverlayController()
     @IBOutlet var voiceButton: UIButton!
  // (remember)
-    let toolPicker = PKToolPicker.init()
+    let toolPicker = PKToolPicker.init() // initializing PKToolPicker
     @IBOutlet weak var canvasView: PKCanvasView!
     
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         
     // self.textView.delegate = self
         
-        textView.delegate = self
+        textView.delegate = self // to the object itself
         textView.text = placeHolder
         textView.textColor = .lightGray
         
@@ -97,7 +97,7 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
     override func touchesBegan(_ touches : Set<UITouch> , with event : UIEvent?) {
     super.touchesBegan(touches , with: event)
         let touch = touches.first!
-        let location = touch.location(in: view)
+        let location = touch.location(in: view) //Returns the current location of the receiver in the coordinate system.
     print("touches began \(location)")
     }
     
@@ -120,8 +120,7 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
     print ("touches cancelled")
     }
     
-    
-    
+    //For the textView change color
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == .lightGray
         {
@@ -159,6 +158,7 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
     func recording(text: String?, final: Bool?, error: Error?) {
         
     }
+    
     // Notifies the view controller that its view is about to be added to a view hierarchy.
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -168,9 +168,8 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
     private func setCanvasView(){
 // (deprecated in xcode 12)       if let window = view.window, let toolPicker = PKToolPicker.shared(for: window) {
             toolPicker.addObserver(canvasView)
-            toolPicker.setVisible(true, forFirstResponder: canvasView)
-            canvasView.becomeFirstResponder()
-
+            toolPicker.setVisible(true, forFirstResponder: canvasView) // Sets the visibility for the tool picker
+            canvasView.becomeFirstResponder() //Asks UIKit to make this object the first responder in its window.
     }
     
     @IBAction func clearCanvas(_ sender: UIBarButtonItem) {
@@ -230,6 +229,7 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         let time = UInt64(Date().timeIntervalSince1970 * 1000)
 
         print("Timestamp in milisecond \(time)")
+        
         // ------------>>>> For creating CSV file
         let fileName = "testing.csv" // CSV filename
         
@@ -247,16 +247,13 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         csvWriter?.finishLine()
         
         var arrOfTimestamp = [[String]]()
-      //  var arrOfTimeInMiliSec = [[Int]]()
+//        var arrOfTimeInMiliSec = [[Int]]()
         
         arrOfTimestamp.append([dateTimeString])
         arrOfTimestamp.append([dateString])
 
+//        arrOfTimeInMiliSec.append([time])
 
-
-       // arrOfTimeInMiliSec.append([time])
-
-        
         for(elements) in arrOfTimestamp.enumerated() {
             csvWriter?.writeField(elements.element[0])
         }
