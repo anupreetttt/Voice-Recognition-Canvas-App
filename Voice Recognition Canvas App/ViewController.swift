@@ -241,7 +241,32 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         let csvWriter = CHCSVWriter(outputStream: output,
                                     encoding: String.Encoding.utf8.rawValue, delimiter: unichar(",".utf8.first!))
         
- 
+        csvWriter?.writeField("Timestamp")
+           csvWriter?.writeField("MM-dd-yyy")
+
+           csvWriter?.finishLine()
+
+           var arrOfTimestamp = [[String]]()
+   //        var arrOfTimeInMiliSec = [[Int]]()
+           
+           arrOfTimestamp.append([dateTimeString])
+           arrOfTimestamp.append([dateString])
+
+   //        arrOfTimeInMiliSec.append([time])
+           for(elements) in arrOfTimestamp.enumerated() {
+               csvWriter?.writeField(elements.element[0])
+           }
+
+           csvWriter?.closeStream()
+
+           let buffer = (output.property(forKey: .dataWrittenToMemoryStreamKey) as? Data)!
+
+           do{
+               try buffer.write(to: documentURL)
+           }
+           catch {
+
+           }
     }
 }
 
