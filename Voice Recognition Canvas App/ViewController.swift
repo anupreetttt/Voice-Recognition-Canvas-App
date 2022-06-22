@@ -10,13 +10,8 @@ import PencilKit
 import PhotosUI
 import InstantSearchVoiceOverlay
 
-
-
-
-
 // A view controller acts as an intermediary between the views it manages and the data of your app.
 class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate, UIGestureRecognizerDelegate {
-    
     
     let placeHolder = "Text here"
     
@@ -35,7 +30,6 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
 //        voiceButton.setTitleColor(.white, for: .normal)
         
 
-        
     // self.textView.delegate = self
         
         textView.delegate = self // to the object itself
@@ -204,20 +198,20 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         let dateString = formatDate.string(from: date as Date)
         print(dateString)
         
-        let stringDate = "06/12/2022"
+        let stringDate = "07/12/2022"
         formatDate.dateFormat = "MM/dd/yyyy"
         formatDate.timeZone = NSTimeZone(abbreviation: "GMT +0:00") as TimeZone?
         let dateFromString = formatDate.date(from: stringDate)
         print (dateFromString!)
         
         // Gets the current date and time :
-        let currentDateTime = Date ()
+        let currentDateTime = Date()
         // Initializes the date formatter and set the style :
-        let formatter = DateFormatter ()
-        formatter.timeStyle = .medium
+        let formatter = DateFormatter()
+        formatter.timeStyle = .long
         formatter.dateStyle = .long
         // Gets the date and time String from the date object :
-        let dateTimeString = formatter.string ( from : currentDateTime )
+        let dateTimeString = formatter.string(from:currentDateTime)
         // Displays it on the label :
         print(dateTimeString)
         
@@ -226,9 +220,14 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
             view.addGestureRecognizer(tap)
         
     // ------>>>> Timestamp in miliseconds
-        let time = UInt64(Date().timeIntervalSince1970 * 1000)
+        let time = UInt64(Date().timeIntervalSince1970 * 1000) //The interval between the date object and 00:00:00 UTC on 1 January 1970.
+        let myTimeString = String(time)
 
-        print("Timestamp in milisecond \(time)")
+        print("Timestamp in milisecond: \(time)")
+        
+        //For timestamp with 10 Digit milliseconds since 1970
+        let timeStamp = Date().timeIntervalSince1970
+        print(timeStamp)
         
         // ------------>>>> For creating CSV file
         let fileName = "testing.csv" // CSV filename
@@ -237,12 +236,12 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
         
         let documentURL = URL(fileURLWithPath: documentDirectoryPath).appendingPathComponent(fileName)
         
-        let output = OutputStream.toMemory()
+        let output = OutputStream.toMemory() // stream data into memory
         let csvWriter = CHCSVWriter(outputStream: output,
                                     encoding: String.Encoding.utf8.rawValue, delimiter: unichar(",".utf8.first!))
         
         csvWriter?.writeField("Timestamp")
-           csvWriter?.writeField("MM-dd-yyy")
+        csvWriter?.writeField("Timestamp in miliseconds")
 
            csvWriter?.finishLine()
 
@@ -250,7 +249,7 @@ class ViewController: UIViewController, VoiceOverlayDelegate, UITextViewDelegate
    //        var arrOfTimeInMiliSec = [[Int]]()
            
            arrOfTimestamp.append([dateTimeString])
-           arrOfTimestamp.append([dateString])
+           arrOfTimestamp.append([myTimeString])
 
    //        arrOfTimeInMiliSec.append([time])
            for(elements) in arrOfTimestamp.enumerated() {
